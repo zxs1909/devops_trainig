@@ -1,0 +1,216 @@
+
+# Git Commands: Description, Syntax, and Examples
+
+## 1. git clone
+**Description**: Used to create a copy of a remote repository on your local machine.
+**Syntax**:
+```
+git clone <repository-url>
+```
+**Example**:
+```
+git clone https://github.com/user/repository.git
+```
+
+## 2. git add .
+**Description**: Adds all changes in the working directory (tracked or untracked files) to the staging area.
+**Syntax**:
+```
+git add .
+```
+**Example**:
+```
+git add .
+```
+
+## 3. git status
+**Description**: Shows the current status of the working directory and staging area.
+**Syntax**:
+```
+git status
+```
+**Example**:
+```
+git status
+```
+
+## 4. git commit
+**Description**: Records changes from the staging area to the local repository.
+**Syntax**:
+```
+git commit -m "<commit-message>"
+```
+**Example**:
+```
+git commit -m "Added new feature"
+```
+
+## 5. git push origin
+**Description**: Uploads local commits to the remote repository.
+**Syntax**:
+```
+git push origin <branch-name>
+```
+**Example**:
+```
+git push origin main
+```
+
+## 6. git fetch
+**Description**: Downloads new data from the remote repository without merging it.
+**Syntax**:
+```
+git fetch
+```
+**Example**:
+```
+git fetch origin
+```
+
+## 7. git pull
+**Description**: Fetches and merges changes from the remote repository into your current branch.
+**Syntax**:
+```
+git pull <remote> <branch>
+```
+**Example**:
+```
+git pull origin main
+```
+
+## 8. git branch
+**Description**: Lists, creates, or deletes branches.
+**Syntax**:
+- **List branches**:
+  ```
+  git branch
+  ```
+- **Create new branch**:
+  ```
+  git branch <branch-name>
+  ```
+- **Delete branch**:
+  ```
+  git branch -d <branch-name>
+  ```
+**Example**:
+```
+git branch feature-1
+```
+
+## 9. git checkout branch-name
+**Description**: Switches to the specified branch or commit.
+**Syntax**:
+```
+git checkout <branch-name>
+```
+**Example**:
+```
+git checkout feature-1
+```
+
+## 10. git push origin --delete branch-name
+**Description**: Deletes a branch from the remote repository.
+**Syntax**:
+```
+git push origin --delete <branch-name>
+```
+**Example**:
+```
+git push origin --delete feature-1
+```
+
+## 11. git rebase and git merge
+- **git merge**: Combines changes of another branch into the current branch.
+- **git rebase**: Moves the base of your branch to the latest commit of another branch.
+
+**Syntax**:
+```
+git merge <branch-name>
+```
+**Example**:
+```
+git merge feature-1
+```
+**Syntax**:
+```
+git rebase <branch-name>
+```
+**Example**:
+```
+git rebase main
+```
+
+## 12. git log --oneline
+**Description**: Displays the commit history in a compact format.
+**Syntax**:
+```
+git log --oneline
+```
+**Example**:
+```
+git log --oneline
+```
+
+## 13. git stash pop
+**Description**: Restores the most recent stashed changes and removes it from the stash list.
+**Syntax**:
+```
+git stash pop
+```
+**Example**:
+```
+git stash pop
+```
+
+## 14. git cherry-pick
+**Description**: Applies a specific commit from one branch into your current branch.
+**Syntax**:
+```
+git cherry-pick <commit-hash>
+```
+**Example**:
+```
+git cherry-pick a1b2c3d
+```
+
+## 15. git reset and git revert
+### git reset
+**Description**: Moves the branch back to a previous state, discarding changes.
+**Syntax**:
+```
+git reset --hard <commit-hash>
+```
+**Example**:
+```
+git reset --hard HEAD~1
+```
+
+### git revert
+**Description**: Creates a new commit that undoes a previous commit.
+**Syntax**:
+```
+git revert <commit-hash>
+```
+**Example**:
+```
+git revert a1b2c3d
+```
+
+## 16. Branching Strategies
+1. **Git Flow**:
+   - Feature branches are created from `develop`.
+   - Once complete, merged into `develop`.
+   - Releases are merged into both `main` and `develop`.
+
+2. **GitHub Flow**:
+   - Main branch is always deployable.
+   - Feature branches are merged via pull requests.
+
+3. **Trunk-Based Development**:
+   - Developers frequently integrate code into the `main` branch.
+   - Branches are short-lived.
+
+4. **Release Branching**:
+   - Used for projects with multiple releases.
+   - Release branches maintain different versions.
